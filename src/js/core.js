@@ -43,7 +43,8 @@ var _options = {
 	modal: true,
 
 	// not fully implemented yet
-	scaleMode: 'fit' // TODO
+	scaleMode: 'fit', // TODO
+	imagePosition: 'center'
 };
 framework.extend(_options, options);
 

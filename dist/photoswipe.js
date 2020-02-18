@@ -1,6 +1,6 @@
-/*! PhotoSwipe - v4.1.3 - 2019-01-08
+/*! PhotoSwipe - v4.1.3 - 2020-02-18
 * http://photoswipe.com
-* Copyright (c) 2019 Dmitry Semenov; */
+* Copyright (c) 2020 Dmitry Semenov; */
 (function (root, factory) { 
 	if (typeof define === 'function' && define.amd) {
 		define(factory);
@@ -341,7 +341,8 @@ var _options = {
 	modal: true,
 
 	// not fully implemented yet
-	scaleMode: 'fit' // TODO
+	scaleMode: 'fit', // TODO
+	imagePosition: 'center'
 };
 framework.extend(_options, options);
 
@@ -2726,7 +2727,7 @@ var _getItemAt,
 
 		// position of element when it's centered
 		bounds.center.x = Math.round((_tempPanAreaSize.x - realPanElementW) / 2);
-		bounds.center.y = Math.round((_tempPanAreaSize.y - realPanElementH) / 2) + item.vGap.top;
+		bounds.center.y = _options.imagePosition == 'center' ? Math.round((_tempPanAreaSize.y - realPanElementH) / 2) + item.vGap.top : item.vGap.top;
 
 		// maximum pan position
 		bounds.max.x = (realPanElementW > _tempPanAreaSize.x) ? 

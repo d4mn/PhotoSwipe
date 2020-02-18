@@ -35,7 +35,7 @@ var _getItemAt,
 
 		// position of element when it's centered
 		bounds.center.x = Math.round((_tempPanAreaSize.x - realPanElementW) / 2);
-		bounds.center.y = Math.round((_tempPanAreaSize.y - realPanElementH) / 2) + item.vGap.top;
+		bounds.center.y = _options.imagePosition == 'center' ? Math.round((_tempPanAreaSize.y - realPanElementH) / 2) + item.vGap.top : item.vGap.top;
 
 		// maximum pan position
 		bounds.max.x = (realPanElementW > _tempPanAreaSize.x) ? 
