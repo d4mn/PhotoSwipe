@@ -418,6 +418,9 @@ var PhotoSwipeUI_Default =
 		{ 
 			name: 'control-btn', 
 			option: 'controlBtn',
+			onTap: function(el){
+				pswp.shout('controlBtn',el);
+			}
 		},
 		{ 
 			name: 'caption', 
