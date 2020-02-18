@@ -419,6 +419,10 @@ var PhotoSwipeUI_Default =
 
 	var _uiElements = [
 		{ 
+			name: 'control-btn', 
+			option: 'controlBtn',
+		},
+		{ 
 			name: 'caption', 
 			option: 'captionEl',
 			onInit: function(el) {  
